@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Görev 5</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/left-column.css">
+    <link rel="stylesheet" href="./css/middle-column.css">
+    <link rel="stylesheet" href="./css/right-column.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@2.2.3/dist/css/datepicker.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@2.2.3/dist/js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!--LEFT COLUMN-->
+      <div class="left-column">
+        <div class="left-column-top">
+            <i class="fa-solid fa-eye fa-2xl"></i>
+        </div>
+        <div class="left-column-body">
+            <div class="left-column-body-top">
+                <div class="left-icons"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div class="left-icons"><i class="fa-solid fa-satellite-dish"></i></div>
+                <div class="left-icons"><i class="fa-solid fa-calendar"></i></div>
+                <div class="left-icons"><i class="fa-solid fa-sliders"></i></div>
+                <div class="left-icons"><i class="fa-regular fa-comments"></i></div>                
+            </div>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </div>
+      </div>
+      <!--MIDDLE COLUMN-->
+      <div class="middle-column">
+        <div class="middle-column-top">
+            <div class="middle-column-top-right">
+                <i class="fa-solid fa-table-list"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="middle-column-top-left">
+                <span>LAST 15 DAYS</span>
+                <i class="fa-solid fa-chevron-down" style="margin-left: 5px;"></i>
+            </div>
+        </div>
+        <div class="middle-column-body">
+            <!--BODY-TOP-->
+            <div class="middle-column-body-top">
+                <!--Twitter-->
+                <div class="middle-column-body-top-item">
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+                    <div class="follower-number">280k</div>
+                    <div class="follower-title">Followers</div>
+                    <div class="continue">...</div>
+                </div>
+                <!--Instagram-->
+                <div class="middle-column-body-top-item instagram">
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <div class="follower-number">680k</div>
+                    <div class="follower-title">Followers</div>
+                    <div class="continue">...</div>
+                </div>
+                <!--Youtube-->
+                <div class="middle-column-body-top-item">
+                    <i class="fa-brands fa-youtube fa-xl"></i>
+                    <div class="follower-number">2.3M</div>
+                    <div class="follower-title">Followers</div>
+                    <div class="continue">...</div>
+                </div>
+                <!--Facebook-->
+                <div class="middle-column-body-top-item">
+                    <i class="fa-brands fa-facebook-f fa-xl"></i>
+                    <div class="follower-number">50k</div>
+                    <div class="follower-title">Followers</div>
+                    <div class="continue">...</div>
+                </div>
+            </div>
+
+            <!--BODY-MIDDLE-->
+            <div class="middle-column-body-middle">
+                <div class="middle-column-body-middle-title">
+                    <span>Instragram Subscribers</span>
+                    <div class="circle-buttons">
+                        <span style="margin-right: 5px;"><i class="fa-solid fa-circle fa-xs gained"></i> Gained</span>
+                        <span><i class="fa-solid fa-circle fa-xs lost"></i> Lost</span>
+                    </div>
+                </div>
+                <div>
+                    <canvas id="bar-chart" width="15" height="5"></canvas>
+                </div>
+            </div>
+
+            <!--BODY-BOTTOM-->
+            <div class="middle-column-body-bottom">
+                <div class="middle-column-body-bottom-left">
+                    <span class="key-metrics-title">Key Metrics</span>
+                    <div class="key-metrics-table">
+                        <div class="key-metrics-table-item">
+                            <span>Clicks</span>
+                            <span>10k</span>
+                        </div>
+                        <div class="key-metrics-table-item">
+                            <span>Likes</span>
+                            <span>680</span>
+                        </div>
+                        <div class="key-metrics-table-item">
+                            <span>Followers</span>
+                            <span>8k</span>
+                        </div>
+                        <div class="key-metrics-table-item">
+                            <span>Impressions</span>
+                            <span>5500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle-column-body-bottom-right">
+                    <div class="middle-column-body-bottom-right-item">
+                        <span class="title">Engaged Users</span>
+                        <span class="number">12.2k</span>
+                        <span><i class="fa-solid fa-angles-up"></i> 19%</span>
+                    </div>
+                    <div class="middle-column-body-bottom-right-item">
+                        <span class="title">Page Impressions</span>
+                        <span class="number">8.6k</span>
+                        <span><i class="fa-solid fa-angles-down"></i> 9%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!--RIGHT COLUMN-->
+      <div class="right-column">
+        <div class="right-column-top">
+            <i class="fa-regular fa-bell"></i>
+            <div class="middle-column-top-updates">
+                <i class="fa-solid fa-gift"></i>
+                <span> 2 NEW UPDATES</span>
+            </div>
+            <i class="fa-regular fa-user"></i>
+        </div>
+        <!--RIGHT COLUMN BODY-->
+        <div class="right-column-body">
+            <img src="./img/scrum.png" alt="" id="img-scrum">
+            <div class="calendar">
+                <input type="text" id="datepicker" data-language="en" hidden />
+            </div>
+            <div class="right-column-body-bottom">
+                <div class="person-item">
+                    <i class="fa-solid fa-hand"></i>
+                    <span class="message">Say hi to <b>Laith Hart</b></span>
+                    <img src="./img/men.png" alt="" width="50px">
+                </div>
+                <div class="person-item">
+                    <i class="fa-solid fa-hand"></i>
+                    <span class="message">Say hi to <b>Sidney Dyer</b></span>
+                    <img src="./img/woman.png" alt=""  width="50px">
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+        $("#datepicker").datepicker({
+            inline: true,
+        });
+    </script>
+  </body>
+</html>
